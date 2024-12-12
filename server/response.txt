@@ -1,0 +1,35 @@
+TEST(Triangle, CalculateAreaPositive) {
+    Triangle triangle(3.0, 4.0);
+    ASSERT_EQ(triangle.calculateArea(), 6.0);
+}
+
+TEST(Triangle, CalculateAreaZeroBase) {
+    Triangle triangle(0.0, 4.0);
+    ASSERT_EQ(triangle.calculateArea(), 0.0);
+}
+
+TEST(Triangle, CalculateAreaZeroHeight) {
+    Triangle triangle(3.0, 0.0);
+    ASSERT_EQ(triangle.calculateArea(), 0.0);
+}
+
+TEST(Palindrome, IsPalindromeEmpty) {
+    ASSERT_TRUE(Palindrome::isPalindrome(""));
+}
+
+TEST(Palindrome, IsPalindromeSingleChar) {
+    ASSERT_TRUE(Palindrome::isPalindrome("a"));
+}
+
+TEST(Palindrome, IsPalindromeTrue) {
+    ASSERT_TRUE(Palindrome::isPalindrome("racecar"));
+}
+
+TEST(Palindrome, IsPalindromeFalse) {
+    ASSERT_FALSE(Palindrome::isPalindrome("hello"));
+}
+
+TEST(Palindrome, IsPalindromeCaseSensitive) {
+    ASSERT_FALSE(Palindrome::isPalindrome("Racecar"));
+}
+
