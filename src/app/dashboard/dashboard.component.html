@@ -1,0 +1,66 @@
+<div class="container mx-auto p-5">
+  <div class="flex flex-wrap ml-9">
+    <!-- Cards for Test Cases -->
+    <div class="test-case-card" *ngFor="let card of cards">
+      <div class="vertical-line text-white p-4 shadow-lg" style="background-color: #00ADFF;">
+        <p class="text-sm font-semibold">{{ card.title }}</p>
+        <p class="text-xs" style="color: #C9DCE4;">Total</p>
+        <p class="text-xl font-bold">{{ card.total }}</p>
+      </div>
+    </div>
+
+    <!-- Card for Average Test Case Accuracy with Round Progress Bar -->
+    <div class="flex-none ml-6" style="width: 27%;background-color: #2A1E5C;">
+      <div class="text-white p-4 ml-4">
+        <div class="flex justify-center items-center">
+          <svg viewBox="0 0 36 36" class="w-32 h-32">
+            <path class="circle-bg"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#444" stroke-width="1.5" />
+            
+            <path class="circle"
+              [attr.stroke-dasharray]="progressValue + ', 100'"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#477DAD" stroke-width="1.5" />
+            <text x="18" y="20.35" class="percentage" fill="#5A9BD5" font-size="0.5em" text-anchor="middle">{{ progressValue }}%</text>
+          </svg>
+        </div>
+        <p class="text-center text-sm mt-2">Accuracy</p>
+        
+        <!-- Test Case Details -->
+        <div class="text-white mt-4 text-center">
+          <div class="flex justify-between">
+            <span>Passed Test Cases:</span>
+            <span>{{ passedTestCases }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Failed Test Cases:</span>
+            <span>{{ failedTestCases }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Chart for Test Case Trend -->
+    <div class="flex-none ml-6">
+      <ngx-charts-line-chart
+        [view]="[700, 400]"
+        [scheme]="colorScheme"
+        [results]="lineChartData"
+        [legend]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [autoScale]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Test Case Type"
+        yAxisLabel="Number of Test Cases"
+        style="fill: white;">
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+</div>

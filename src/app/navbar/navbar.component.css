@@ -1,0 +1,83 @@
+#mobile-menu-button {
+    display: block; /* The button is always visible on small screens */
+  }
+  
+  fa-icon{
+    color: #A49DC3;
+  }
+  fa-icon:hover{
+    color: #6a657c;
+  }
+
+.dropdown-content {
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 50;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  aside {
+    background-color: #2A1E5C;
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 40; 
+  }
+
+  .horizontal-line {
+    border: none;
+    border-top: 0.25px solid #EDEEF2;
+  }
+  
+  
+  @media (min-width: 768px) {
+    aside {
+      width: 2.5rem;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .menu-open #content {
+    margin-left: 12rem;
+  }
+  
+  @media (min-width: 768px) {
+    #content {
+      margin-left: 100px;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #userIcon {
+      display: none;
+    }
+    .burger-icon {
+      display: block;
+      margin-top: 10px;
+    }
+    .sidebar{
+        position: relative;
+    }
+    
+  }

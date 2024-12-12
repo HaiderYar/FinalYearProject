@@ -1,0 +1,46 @@
+<main class="pt-16 md:pt-0 md:mt-4">
+  <div class="container mx-auto">
+    <div class="flex flex-col items-center justify-center h-full">
+      <h1 class="text-2xl font-bold mb-4">Enter a Link</h1>
+
+      <!-- GitHub URL Input -->
+      <input 
+        type="text" 
+        id="linkInput" 
+        placeholder="Enter the GitHub repository URL" 
+        class="border-2 border-gray-300 p-2 w-full max-w-md mb-4"
+      >
+
+      <!-- Special Instructions Input -->
+      <textarea
+        id="specialInstructionsInput"
+        placeholder="Enter any special instructions"
+        class="border-2 border-gray-300 p-2 w-full max-w-md mb-4"
+        rows="3"
+      ></textarea>
+
+      <!-- Generate Button -->
+      <button 
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
+        (click)="fetchCppFiles()"
+      >
+        Generate
+      </button>
+    </div>
+
+    <!-- Display .cpp Files -->
+    <div *ngIf="cppFiles.length > 0" class="flex flex-col items-center">
+      <h3 class="text-xl font-bold mb-4">Found .cpp Files:</h3>
+      <ul class="w-full max-w-md">
+        <li *ngFor="let file of cppFiles" class="mb-2">
+          <button 
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
+            (click)="navigateToTestGeneratedPage(file.content)"
+          >
+            {{ file.filename }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>

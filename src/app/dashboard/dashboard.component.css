@@ -1,0 +1,8 @@
+.vertical-line {
+    border-left: 1px solid #99D9FA; /* Change color and width as needed */
+    height: 98px; /* Adjust height as needed */
+}
+  
+.test-case-card{
+    width: 23%;
+}

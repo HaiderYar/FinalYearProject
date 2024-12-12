@@ -1,0 +1,53 @@
+ <div class="flex">
+  <!-- Sidebar -->
+  <aside [class]="menuOpen ? 'translate-x-0' : '-translate-x-full'" class="text-white fixed inset-y-0 left-0 transition duration-300 ease-in-out w-16 md:w-64 z-40">
+    <a routerLink="/" class="block mt-32 px-3 rounded transition duration-200">
+      <fa-icon [icon]="faHome"></fa-icon>
+    </a>
+    <a routerLink="/link" class="block mt-16 px-3 rounded transition duration-200">
+      <fa-icon [icon]="faLink"></fa-icon>
+    </a>
+    <a routerLink="/test-generator" class="block mt-16 px-3 rounded transition duration-200">
+      <fa-icon [icon]="faCode"></fa-icon>
+    </a>
+    <a routerLink="/test-cases" class="block mt-16 px-3 rounded transition duration-200">
+      <fa-icon [icon]="faGears"></fa-icon>
+    </a>
+    <div class="absolute bottom-0 w-full block md:hidden">
+      <button class="w-full text-center py-4">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </button>
+    </div>
+  </aside>
+
+  <div class="flex-1 p-10 text-2xl font-bold relative">
+    <header class="top-0 left-0 w-full z-30">
+      <div class="flex justify-between items-center px-4 py-2">
+        <span class="text-2xl font-bold">{{ currentTitle }}</span>
+        <div class="relative flex">
+          <div class="dropdown">
+            <button class="p-2 relative">
+              <fa-icon [icon]="faBell"></fa-icon>
+            </button>
+            <div class="dropdown-content hidden absolute right-0 bg-white shadow-md mt-2 py-2 w-48">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">notify1</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">notify2</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">notify3</a>
+            </div>
+          </div>
+    
+          <button id="userIcon" class="p-2 ml-4">
+            <fa-icon [icon]="faUser"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <div class="md:hidden absolute top-10 right-0 m-4">
+      <button (click)="toggleMenu()" class=" text-white focus:outline-none focus:ring-2  rounded">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+    </div>
+    <hr class="horizontal-line">
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="flex justify-center gap-4 p-10">
+    <!-- Left Panel for Test Cases -->
+    <div class="ms-4 w-full md:w-1/2 bg-gray-900 p-6 rounded-lg shadow-xl">
+        <pre class="text-sm text-green-400">
+            <h1 style="font-size: larger;">Test Cases</h1>
+            <code class="language-cpp" [innerHTML]="formattedTestCases"></code>
+        </pre>
+    </div>
+  
+    <!-- Right Panel for Terminal Output -->
+    <div class="w-full md:w-1/2 bg-gray-900 p-6 rounded-lg shadow-xl">
+        <pre class="text-red-400 text-sm">
+            <h1 style="font-size: larger;">Terminal Output</h1>
+            <code class="language-bash" [innerHTML]="terminalOutput"></code>
+        </pre>
+    </div>
+  </div>
+  
