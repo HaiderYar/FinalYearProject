@@ -1,25 +1,32 @@
 # MyApp
 
+## Some Key requirnment
+
+You will need to install mingw, along with setting up gtest in your local machine using cmake. 
+
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a development server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Express Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to server folder and open terminal and in terminal.
 
-## Build
+Run `node server.js` to start a new server.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Fetching github commit
 
-## Running unit tests
+Go to link page which can be found on left side in navbar and paste a url. You will be shown most recent github commit in the form or green button with the file name in it. Press the button whose code you require.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Generating test cases
 
-## Running end-to-end tests
+After pressing you will be taken to a new page where you will see extracted code on left side and for about 30 to 40 seconds wait you will see generated test cases on right hand side. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Validating
+
+Then you will see a validate button at the bottom in the center. Press that and you will taken to a new screen where you will see your generated test cases on left side. After 1 to 2 seconds delay you will see the terminal output for generated test cases and you can check how many have passed and how many have failed.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If you face any issue feel free to email me at haider.yar2011@gmail.com or you can start a ticket.
